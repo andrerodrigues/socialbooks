@@ -26,6 +26,11 @@ public class LivrosService {
 		return livrosRepository.findAll();
 	}
 	
+	public List<Livro> listar(String nome){
+		List<Livro> livros = livrosRepository.findByNome(nome);
+		return livros;
+	}
+	
 	public Livro buscar(Long id){
 		Livro livro = livrosRepository.findOne(id);
 		
